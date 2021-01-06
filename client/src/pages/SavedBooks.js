@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
 
 //import { getMe, deleteBook } from '../utils/API';
@@ -7,12 +7,12 @@ import { removeBookId } from '../utils/localStorage';
 
 // integrate Apollo Hooks
 import {useMutation, useQuery} from '@apollo/react-hooks';
-import { GET_USER } from '../utils/queries';
+import { GET_ME } from '../utils/queries';
 import { REMOVE_BOOK } from '../utils/mutations';
 
 const SavedBooks = () => {
   // use useQuery hook to make query request
-  const { loading, data } = useQuery(GET_USER);
+  const { loading, data } = useQuery(GET_ME);
 
   // use userMutation hook to make delete request
   const [removeBook, {error}] = useMutation(REMOVE_BOOK);

@@ -1,6 +1,6 @@
 import ggl from 'graphql-tag';
 
-export const GET_USER = ggl `
+export const GET_ME = ggl `
 {
     me {
         _id
