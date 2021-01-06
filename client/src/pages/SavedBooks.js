@@ -6,7 +6,7 @@ import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 
 // integrate Apollo Hooks
-import { useQuery } from '@apollo/react-hooks';
+import {useMutation, useQuery} from '@apollo/react-hooks';
 import { GET_USER } from '../utils/queries';
 import { REMOVE_BOOK } from '../utils/mutations';
 
@@ -21,7 +21,7 @@ const SavedBooks = () => {
   const userData = data?.me || [];
 
   // function to delete books
-  const deleteBook = async(bookId) => {
+  const handleDeleteBook = async(bookId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
     if (!token) {
       return false;
@@ -37,7 +37,7 @@ const SavedBooks = () => {
   };
 
   // if data isn't here yet, say so
-  if (!userDataLength) {
+  if ( loading ) {
     return <h2>LOADING...</h2>;
   }
 

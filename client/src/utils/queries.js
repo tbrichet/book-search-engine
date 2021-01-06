@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import ggl from 'graphql-tag';
 
 export const GET_USER = ggl `
 {
@@ -16,5 +16,4 @@ export const GET_USER = ggl `
             link
         }
     }
-}
-;`
+}`;
