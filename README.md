@@ -58,7 +58,7 @@ This application allows avid readers to search for new books to read and keep a 
 * CSS <br>
 
 ## Links
-Github Repository | https://github.com/tbrichet/book-search-engine
+Github Repository | https://github.com/tbrichet/book-search-engine <br>
 Deployed Application | https://guarded-shore-45433.herokuapp.com/ <br>
 
 ## Screenshot
